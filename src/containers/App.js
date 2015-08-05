@@ -10,7 +10,6 @@ import * as reducers from '../reducers';
 const reducer = combineReducers(reducers);
 const store = createStore(reducer);
 
-console.log(reducers);
 export default class App extends Component {
   render() {
     return (
