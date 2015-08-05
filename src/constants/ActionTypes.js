@@ -1,3 +1,3 @@
 export const ADD_FRIEND = 'ADD_FRIEND';
-export const MARK_FAVORITE_FRIEND = 'MARK_FAVORITE_FRIEND';
+export const STAR_FRIEND = 'STAR_FRIEND';
 export const DELETE_FRIEND = 'DELETE_FRIEND';

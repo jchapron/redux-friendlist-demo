@@ -14,9 +14,9 @@ export function deleteFriend(id) {
   };
 }
 
-export function markFavoriteFriend(id) {
+export function starFriend(id) {
   return {
-    type: types.MARK_FAVORITE_FRIEND,
+    type: types.STAR_FRIEND,
     id
   };
 }
