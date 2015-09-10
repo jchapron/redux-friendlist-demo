@@ -6,9 +6,9 @@ export default class FriendListItem extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    starred: PropTypes.boolean,
+    starred: PropTypes.bool,
     starFriend: PropTypes.func.isRequired,
-    onTrashClick: PropTypes.func.isRequired
+    deleteFriend: PropTypes.func.isRequired
   }
 
   render () {
