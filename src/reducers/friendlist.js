@@ -25,7 +25,7 @@ export default function friends(state = initialState, action) {
   switch (action.type) {
 
     case types.ADD_FRIEND:
-      const newId = state.friends[state.friends.length-1] + 1;
+      const newId = state.friends.length === 0 ? 1 : state.friends[state.friends.length-1] + 1;
       return {
         ...state,
         friends: state.friends.concat(newId),
