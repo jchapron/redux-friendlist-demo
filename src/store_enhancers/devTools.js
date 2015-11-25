@@ -8,9 +8,8 @@ if (__DEV__) {
     require('redux-devtools').devTools(),
     require('redux-devtools').persistState(
       window.location.href.match(/[?&]debug_session=([^&]+)\b/)
-    ),
-    createStore
-  );
+    )
+  )(createStore);
 }
 
 export function renderDevTools(store) {

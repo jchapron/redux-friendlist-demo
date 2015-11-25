@@ -6,13 +6,10 @@ import { connect } from 'react-redux';
 import * as FriendsActions from '../actions/FriendsActions';
 import { FriendList, AddFriendInput } from '../components';
 
-@connect(state => ({
-  friendlist: state.friendlist
-}))
-export default class FriendListApp extends Component {
+class FriendListApp extends Component {
 
   static propTypes = {
-    friendsById: PropTypes.object.isRequired,
+    // friendsById: PropTypes.object.isRequired,
     dispatch: PropTypes.func.isRequired
   }
 
@@ -29,3 +26,13 @@ export default class FriendListApp extends Component {
     );
   }
 }
+
+
+// Babel 6.x doesn't seem to support decorators yet
+function select(state) {
+  return {
+    friendlist: state.friendlist
+  }
+}
+
+export default connect(select)(FriendListApp)

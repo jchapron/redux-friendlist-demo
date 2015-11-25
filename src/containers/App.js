@@ -15,10 +15,10 @@ export default class App extends Component {
     return (
       <div>
         <Provider store={store}>
-          {() => <FriendListApp /> }
+          <FriendListApp />
         </Provider>
 
-        {renderDevTools(store)}
+        { renderDevTools(store) }
       </div>
     );
   }

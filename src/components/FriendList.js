@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import mapValues from 'lodash/object/mapValues';
+import map from 'lodash/collection/map';
 
 import styles from './FriendList.css';
 import FriendListItem from './FriendListItem';
@@ -14,7 +14,7 @@ export default class FriendList extends Component {
     return (
       <ul className={styles.friendList}>
         {
-          mapValues(this.props.friends, (friend) => {
+          map(this.props.friends, (friend) => {
             return (<FriendListItem
               key={friend.id}
               id={friend.id}
